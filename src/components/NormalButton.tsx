@@ -3,9 +3,14 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 type ButtonProps = {
   text: string;
+  variant?: {
+    color: string;
+    backgroundColor: string;
+    border: string;
+  };
 };
 
-const NormalButton = ({ text }: ButtonProps) => {
+const NormalButton = ({ text, variant }: ButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -23,12 +28,14 @@ const NormalButton = ({ text }: ButtonProps) => {
       justifyContent: "center",
       padding: "10px 20px",
       borderRadius: "6px",
-      backgroundColor: "#007bff",
-      color: "#ffffff",
+      backgroundColor: variant?.backgroundColor,
+      color: variant?.color,
       fontSize: "16px",
       fontWeight: "bold",
       cursor: "pointer",
-      border: "none",
+      border: `1px solid ${variant?.border}`,
+      width: "fit-content",
+      height: "auto",
     },
     rightArrow: {
       marginLeft: "8px",
