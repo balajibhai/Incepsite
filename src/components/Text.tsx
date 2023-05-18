@@ -2,7 +2,13 @@ import React from "react";
 
 type TextComponentProps = {
   text: string;
-  type: "Title" | "Subtitle" | "Footer-title" | "Footer-subtitle" | "Number";
+  type:
+    | "Title"
+    | "Subtitle"
+    | "Footer-title"
+    | "Footer-subtitle"
+    | "Number"
+    | "bottom-text";
   color?: string;
 };
 
@@ -26,6 +32,21 @@ const Text: React.FC<TextComponentProps> = ({ text, type, color }) => {
       fontWeight: "500",
       fontFamily: "Diatype,Arial,sans-serif",
     },
+    footerTitle: {
+      color: "#929295",
+      fontSize: "2rem",
+      fontFamily: "Diatype,Arial,sans-serif",
+    },
+    footerSubtitle: {
+      color: "#fff",
+      fontSize: "1rem",
+      fontFamily: "Diatype,Arial,sans-serif",
+    },
+    bottomText: {
+      color: "#929295",
+      fontSize: "0.85rem",
+      fontFamily: "Diatype,Arial,sans-serif",
+    },
   };
   if (type === "Title") {
     return <div style={classes.title}>{text}</div>;
@@ -33,8 +54,12 @@ const Text: React.FC<TextComponentProps> = ({ text, type, color }) => {
     return <div style={classes.subtitle}>{text}</div>;
   } else if (type === "Number") {
     return <div style={classes.number}>{text}</div>;
+  } else if (type === "Footer-title") {
+    return <div style={classes.footerTitle}>{text}</div>;
+  } else if (type === "Footer-subtitle") {
+    return <div style={classes.footerSubtitle}>{text}</div>;
   }
-  return null;
+  return <div style={classes.bottomText}>{text}</div>;
 };
 
 export default Text;

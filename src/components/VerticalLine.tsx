@@ -1,12 +1,12 @@
 type VerticalLineProps = {
-  height?: string;
+  height: string;
 };
 
 const VerticalLine = ({ height }: VerticalLineProps) => {
   const classes = {
     line: {
       width: "2px",
-      height: "100px",
+      height: height,
       borderLeft: "1px solid #00000030",
     },
   };

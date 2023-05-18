@@ -39,10 +39,30 @@ const TextSection = () => {
       <div>
         <div style={classes.numbersection}>
           <Text text="1" type="Number" color="#bf2b06" />
-          <VerticalLine />
+          <VerticalLine height="100px" />
           <div style={{ width: "484px" }}>
             <Text
               text="On the permissionless Solana network, anyone can participate in helping to secure the network as a validator. The Solana Foundation encourages new and existing validators to maintain high quality operations via the incentive structure of our Delegation Program."
+              type="Subtitle"
+            />
+          </div>
+        </div>
+        <div style={{ ...classes.numbersection, marginTop: "62px" }}>
+          <Text text="2" type="Number" color="#9e277b" />
+          <VerticalLine height="70px" />
+          <div style={{ width: "484px" }}>
+            <Text
+              text="Validator operators and RPC node operators may choose to participate in our Server Program to locate their operations in data centers distributed around the globe."
+              type="Subtitle"
+            />
+          </div>
+        </div>
+        <div style={{ ...classes.numbersection, marginTop: "62px" }}>
+          <Text text="3" type="Number" color="#44167e" />
+          <VerticalLine height="80px" />
+          <div style={{ width: "484px" }}>
+            <Text
+              text="Community members and token holders can choose to participate in Stake Pools to directly increase the censorship resistance of the network while potentially earning tokens at the same time."
               type="Subtitle"
             />
           </div>
