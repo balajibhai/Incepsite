@@ -2,6 +2,7 @@ import React from "react";
 import NormalButton from "./NormalButton";
 import Image from "./Image";
 import CardsGrid from "./CardsGrid";
+import TextSection from "./TextSection";
 
 type StyleObject = {
   [key: string]: React.CSSProperties;
@@ -62,6 +63,7 @@ const Body = () => {
         </div>
       </div>
       <CardsGrid />
+      <TextSection />
     </>
   );
 };
