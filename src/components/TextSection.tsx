@@ -8,14 +8,14 @@ type StyleObject = {
 
 const TextSection = () => {
   const classes: StyleObject = {
-    parent: {
+    censorshipPoints: {
       width: "631px",
       height: "139px",
       flexDirection: "column",
       justifyContent: "space-between",
       display: "flex",
     },
-    grandParent: {
+    censorship: {
       display: "flex",
       margin: "132px",
     },
@@ -26,8 +26,8 @@ const TextSection = () => {
     },
   };
   return (
-    <div style={classes.grandParent}>
-      <div style={classes.parent}>
+    <div style={classes.censorship}>
+      <div style={classes.censorshipPoints}>
         <div style={{ width: "441px", overflowY: "hidden" }}>
           <Text text="Censorship resistance, now." type="Title" />
         </div>
