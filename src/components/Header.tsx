@@ -1,6 +1,4 @@
-import React from "react";
 import Image from "./Image";
-import Theme from "./Theme";
 import { useTheme } from "@mui/material";
 import { ThemeButton } from "./ThemeButton";
 
