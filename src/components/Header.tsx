@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "./Image";
+import Theme from "./Theme";
 
 const Header = () => {
   const navigate = [
@@ -23,6 +24,7 @@ const Header = () => {
       display: "flex",
       justifyContent: "space-between",
       margin: "28px",
+      alignItems: "center",
     },
     image: {
       display: "flex",
@@ -51,6 +53,7 @@ const Header = () => {
           return <div style={{ cursor: "pointer" }}>{item}</div>;
         })}
       </div>
+      <Theme />
     </div>
   );
 };

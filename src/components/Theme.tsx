@@ -5,7 +5,9 @@ import { useTheme, ThemeProvider, createTheme } from "@mui/material/styles";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
+export const ColorModeContext = React.createContext({
+  toggleColorMode: () => {},
+});
 
 function MyApp() {
   const theme = useTheme();
@@ -14,7 +16,6 @@ function MyApp() {
     <Box
       sx={{
         display: "flex",
-        width: "100%",
         alignItems: "center",
         justifyContent: "center",
         bgcolor: "background.default",
