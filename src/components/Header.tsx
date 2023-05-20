@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "./Image";
 import Theme from "./Theme";
+import { useTheme } from "@mui/material";
+import { ThemeButton } from "./ThemeButton";
 
 const Header = () => {
+  const { mode } = useTheme().palette;
+  const theme = mode === "dark" ? "black" : "white";
   const navigate = [
     "ABOUT",
     "DELEGATIO PROGRAM",
@@ -25,6 +29,7 @@ const Header = () => {
       justifyContent: "space-between",
       margin: "28px",
       alignItems: "center",
+      backgroundColor: theme,
     },
     image: {
       display: "flex",
@@ -53,7 +58,7 @@ const Header = () => {
           return <div style={{ cursor: "pointer" }}>{item}</div>;
         })}
       </div>
-      <Theme />
+      <ThemeButton />
     </div>
   );
 };
