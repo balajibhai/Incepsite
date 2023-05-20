@@ -3,22 +3,27 @@ import NormalButton from "./NormalButton";
 import Image from "./Image";
 import CardsGrid from "./CardsGrid";
 import TextSection from "./TextSection";
+import { useTheme } from "@mui/material";
 
 type StyleObject = {
   [key: string]: React.CSSProperties;
 };
 
 const Body = () => {
+  const { mode } = useTheme().palette;
+  const theme = mode === "dark" ? "white" : "black";
   const classes: StyleObject = {
     text: {
       fontWeight: "700",
       fontSize: "40px",
       fontFamily: "Diatype,Arial,sans-serif",
       height: "230px",
+      color: theme,
     },
     subtext: {
       fontSize: "25px",
       fontFamily: "Diatype,Arial,sans-serif",
+      color: theme,
     },
     parent: {
       width: "500px",

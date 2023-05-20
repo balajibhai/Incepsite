@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material";
 import React from "react";
 
 type TextComponentProps = {
@@ -13,15 +14,17 @@ type TextComponentProps = {
 };
 
 const Text: React.FC<TextComponentProps> = ({ text, type, color }) => {
+  const { mode } = useTheme().palette;
+  const theme = mode === "dark" ? "white" : "black";
   const classes = {
     title: {
-      color: "black",
+      color: theme,
       fontSize: "40px",
       fontWeight: "700",
       fontFamily: "Diatype,Arial,sans-serif",
     },
     subtitle: {
-      color: "black",
+      color: theme,
       fontSize: "17px",
       fontWeight: "200",
       fontFamily: "Diatype,Arial,sans-serif",

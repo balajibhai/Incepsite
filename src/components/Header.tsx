@@ -4,7 +4,7 @@ import { ThemeButton } from "./ThemeButton";
 
 const Header = () => {
   const { mode } = useTheme().palette;
-  const theme = mode === "dark" ? "black" : "white";
+  const theme = mode === "dark" ? "white" : "black";
   const navigate = [
     "ABOUT",
     "DELEGATIO PROGRAM",
@@ -21,13 +21,13 @@ const Header = () => {
       alignItems: "center",
       marginRight: "272px",
       fontFamily: "Diatype,Arial,sans-serif",
+      color: theme,
     },
     parent: {
       display: "flex",
       justifyContent: "space-between",
       margin: "28px",
       alignItems: "center",
-      backgroundColor: theme,
     },
     image: {
       display: "flex",
@@ -35,6 +35,7 @@ const Header = () => {
       justifyContent: "space-between",
       marginLeft: "45px",
       cursor: "pointer",
+      backgroundColor: "#fff",
     },
   };
   return (
