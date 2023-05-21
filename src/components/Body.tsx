@@ -38,6 +38,12 @@ const Body = () => {
       margin: "150px",
       height: "555px",
     },
+    tesseract: {
+      position: "absolute",
+      bottom: "0px",
+      left: "625px",
+      top: "105px",
+    },
   };
   return (
     <>
@@ -60,7 +66,7 @@ const Body = () => {
             text="Learn more about solana"
           />
         </div>
-        <div style={{ marginTop: "-130px" }}>
+        <div style={classes.tesseract}>
           <Image
             src={ballImg}
             alt="Example image"
