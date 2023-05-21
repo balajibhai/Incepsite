@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import NormalButton from "./NormalButton";
 import Image from "./Image";
 import CardsGrid from "./CardsGrid";
 import TextSection from "./TextSection";
-import { useTheme } from "@mui/material";
+import { ColorModeContext } from "./Theme";
 
 type StyleObject = {
   [key: string]: React.CSSProperties;
 };
 
 const Body = () => {
-  const { mode } = useTheme().palette;
+  const { mode } = useContext(ColorModeContext);
   const theme = mode === "dark" ? "white" : "black";
   const classes: StyleObject = {
     text: {

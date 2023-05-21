@@ -1,9 +1,10 @@
 import Image from "./Image";
-import { useTheme } from "@mui/material";
 import { ThemeButton } from "./ThemeButton";
+import { useContext } from "react";
+import { ColorModeContext } from "./Theme";
 
 const Header = () => {
-  const { mode } = useTheme().palette;
+  const { mode } = useContext(ColorModeContext);
   const theme = mode === "dark" ? "white" : "black";
   const navigate = [
     "ABOUT",

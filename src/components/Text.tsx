@@ -1,5 +1,5 @@
-import { useTheme } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { ColorModeContext } from "./Theme";
 
 type TextComponentProps = {
   text: string;
@@ -14,7 +14,7 @@ type TextComponentProps = {
 };
 
 const Text: React.FC<TextComponentProps> = ({ text, type, color }) => {
-  const { mode } = useTheme().palette;
+  const { mode } = useContext(ColorModeContext);
   const theme = mode === "dark" ? "white" : "black";
   const classes = {
     title: {

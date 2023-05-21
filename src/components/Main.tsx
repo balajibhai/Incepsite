@@ -2,10 +2,11 @@ import Body from "./Body";
 import Footer from "./Footer";
 import Header from "./Header";
 import "../App.css";
-import { useTheme } from "@mui/material";
+import { useContext } from "react";
+import { ColorModeContext } from "./Theme";
 
 const Main = () => {
-  const { mode } = useTheme().palette;
+  const { mode } = useContext(ColorModeContext);
   return (
     <div className={mode === "dark" ? "app-container-dark" : "app-container"}>
       <Header />

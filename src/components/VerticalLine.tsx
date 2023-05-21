@@ -1,12 +1,13 @@
-import { useTheme } from "@mui/material";
+import { useContext } from "react";
+import { ColorModeContext } from "./Theme";
 
 type VerticalLineProps = {
   height: string;
 };
 
 const VerticalLine = ({ height }: VerticalLineProps) => {
-  const { mode } = useTheme().palette;
-  const theme = mode === "dark" ? "white" : "black";
+  const { mode } = useContext(ColorModeContext);
+
   const classes = {
     line: {
       width: "2px",
