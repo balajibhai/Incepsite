@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import NormalButton from "./NormalButton";
 import Image from "./Image";
 import CardsGrid from "./CardsGrid";
 import TextSection from "./TextSection";
+import { ColorModeContext } from "./Theme";
+import { ballImg } from "../Constants";
 
 type StyleObject = {
   [key: string]: React.CSSProperties;
 };
 
 const Body = () => {
+  const { mode } = useContext(ColorModeContext);
+  const theme = mode === "dark" ? "white" : "black";
   const classes: StyleObject = {
     text: {
       fontWeight: "700",
       fontSize: "40px",
       fontFamily: "Diatype,Arial,sans-serif",
       height: "230px",
+      color: theme,
     },
     subtext: {
       fontSize: "25px",
       fontFamily: "Diatype,Arial,sans-serif",
+      color: theme,
     },
     parent: {
       width: "500px",
@@ -31,6 +37,12 @@ const Body = () => {
       display: "flex",
       margin: "150px",
       height: "555px",
+    },
+    tesseract: {
+      position: "absolute",
+      bottom: "0px",
+      left: "625px",
+      top: "105px",
     },
   };
   return (
@@ -54,9 +66,9 @@ const Body = () => {
             text="Learn more about solana"
           />
         </div>
-        <div style={{ marginTop: "-130px" }}>
+        <div style={classes.tesseract}>
           <Image
-            src="https://solana.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fheader-2.a3e5e47e.png&w=1080&q=50"
+            src={ballImg}
             alt="Example image"
             variation={{ width: "776px", height: "820px" }}
           />
