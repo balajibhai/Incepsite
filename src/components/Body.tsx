@@ -4,6 +4,7 @@ import Image from "./Image";
 import CardsGrid from "./CardsGrid";
 import TextSection from "./TextSection";
 import { ColorModeContext } from "./Theme";
+import { ballImg } from "../Constants";
 
 type StyleObject = {
   [key: string]: React.CSSProperties;
@@ -61,7 +62,7 @@ const Body = () => {
         </div>
         <div style={{ marginTop: "-130px" }}>
           <Image
-            src="https://solana.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fheader-2.a3e5e47e.png&w=1080&q=50"
+            src={ballImg}
             alt="Example image"
             variation={{ width: "776px", height: "820px" }}
           />

@@ -1,5 +1,6 @@
 import Image from "./Image";
 import Text from "./Text";
+import { darkLogo } from "../Constants";
 
 const Footer = () => {
   const subtitles = (titles: string[]) => {
@@ -45,7 +46,7 @@ const Footer = () => {
       >
         <div>
           <Image
-            src="https://solana.org/_next/static/media/solana_foundation_logo_dark_full.2bf56950.svg"
+            src={darkLogo}
             alt="Example image"
             variation={{ width: "159px", height: "28px" }}
           />
