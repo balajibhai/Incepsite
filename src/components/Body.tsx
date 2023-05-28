@@ -5,10 +5,17 @@ import CardsGrid from "./CardsGrid";
 import TextSection from "./TextSection";
 import { ColorModeContext } from "./Theme";
 import { ballImg } from "../Constants";
+import styled from "styled-components";
 
 type StyleObject = {
   [key: string]: React.CSSProperties;
 };
+
+const Subtext = styled.div`
+  font-size: 25px;
+  font-family: "Diatype", Arial, sans-serif;
+  color: ${(props) => props.theme};
+`;
 
 const Body = () => {
   const { mode } = useContext(ColorModeContext);
@@ -52,11 +59,11 @@ const Body = () => {
           <div style={classes.text}>
             <h1>The Solana Foundation</h1>
           </div>
-          <div style={classes.subtext}>
+          <Subtext theme={theme}>
             The Solana Foundation is a non-profit foundation based in Zug,
             Switzerland, dedicated to the decentralization, adoption, and
             security of the Solana ecosystem.
-          </div>
+          </Subtext>
           <NormalButton
             variant={{
               color: "black",

@@ -5,8 +5,7 @@ const CardsGrid = () => {
     <div style={{ marginLeft: "145px" }}>
       <div
         style={{
-          width: "1060px",
-          justifyContent: "space-between",
+          maxWidth: "1060px",
           display: "flex",
         }}
       >
@@ -28,13 +27,13 @@ const CardsGrid = () => {
             color: "#fff",
             text: "Build for the common good",
             backgroundColor: "#bf2b06",
+            marginLeft: "50px",
           }}
         />
       </div>
       <div
         style={{
-          width: "1060px",
-          justifyContent: "space-between",
+          maxWidth: "1060px",
           display: "flex",
           marginTop: "50px",
         }}
@@ -57,6 +56,7 @@ const CardsGrid = () => {
             color: "#fff",
             text: "What to expect",
             backgroundColor: "#44167e",
+            marginLeft: "50px",
           }}
         />
       </div>
