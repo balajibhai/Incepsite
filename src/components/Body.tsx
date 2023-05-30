@@ -17,6 +17,31 @@ const Subtext = styled.div`
   color: ${(props) => props.theme};
 `;
 
+const TextParent = styled.div`
+  @media (max-width: 1275px) {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    color: ${(props) => props.theme};
+  }
+`;
+
+const Parent = styled.div`
+  width: 500px;
+  height: 452px;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  color: ${(props) => props.theme};
+
+  @media (max-width: 1275px) {
+    display: flex;
+    width: 85%;
+    height: unset;
+    color: ${(props) => props.theme};
+  }
+`;
+
 const Body = () => {
   const { mode } = useContext(ColorModeContext);
   const theme = mode === "dark" ? "white" : "black";
@@ -25,12 +50,7 @@ const Body = () => {
       fontWeight: "700",
       fontSize: "40px",
       fontFamily: "Diatype,Arial,sans-serif",
-      height: "230px",
-      color: theme,
-    },
-    subtext: {
-      fontSize: "25px",
-      fontFamily: "Diatype,Arial,sans-serif",
+      height: "46%",
       color: theme,
     },
     parent: {
@@ -42,42 +62,42 @@ const Body = () => {
     },
     grandParent: {
       display: "flex",
-      margin: "150px",
-      height: "555px",
-    },
-    tesseract: {
-      position: "absolute",
-      bottom: "0px",
-      left: "625px",
-      top: "105px",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "100%",
+      flexWrap: "wrap",
     },
   };
   return (
     <>
       <div style={classes.grandParent}>
-        <div style={classes.parent}>
-          <div style={classes.text}>
-            <h1>The Solana Foundation</h1>
-          </div>
-          <Subtext theme={theme}>
-            The Solana Foundation is a non-profit foundation based in Zug,
-            Switzerland, dedicated to the decentralization, adoption, and
-            security of the Solana ecosystem.
-          </Subtext>
-          <NormalButton
-            variant={{
-              color: "black",
-              backgroundColor: "white",
-              border: "black",
-            }}
-            text="Learn more about solana"
-          />
-        </div>
-        <div style={classes.tesseract}>
+        <TextParent theme={theme}>
+          <Parent theme={theme}>
+            <div style={classes.text}>
+              <h1>The Solana Foundation</h1>
+            </div>
+            <Subtext theme={theme}>
+              The Solana Foundation is a non-profit foundation based in Zug,
+              Switzerland, dedicated to the decentralization, adoption, and
+              security of the Solana ecosystem.
+            </Subtext>
+            <div>
+              <NormalButton
+                variant={{
+                  color: "black",
+                  backgroundColor: "white",
+                  border: "black",
+                }}
+                text="Learn more about solana"
+              />
+            </div>
+          </Parent>
+        </TextParent>
+        <div>
           <Image
             src={ballImg}
             alt="Example image"
-            variation={{ width: "776px", height: "820px" }}
+            variation={{ width: "45vw", height: "auto" }}
           />
         </div>
       </div>
