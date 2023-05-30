@@ -67,7 +67,6 @@ export default function CardComponent({ variant }: CardProps) {
           minHeight: "350px",
           backgroundColor: variant.backgroundColor,
           borderRadius: "30px",
-          marginLeft: variant.marginLeft,
           "@media (max-width: 1000px)": {
             // media query for screens up to 600px width
             minWidth: "200px",

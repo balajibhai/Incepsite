@@ -18,24 +18,23 @@ const Header = () => {
   const classes = {
     navigate: {
       display: "flex",
-      justifyContent: "space-between",
-      width: "773px",
+      width: "80%",
       alignItems: "center",
-      marginRight: "272px",
+      gap: "15px",
       fontFamily: "Diatype,Arial,sans-serif",
       color: theme,
     },
     parent: {
       display: "flex",
-      justifyContent: "space-between",
-      margin: "28px",
       alignItems: "center",
+      margin: "43px",
+      width: "100%",
+      gap: "160px",
     },
     image: {
       display: "flex",
-      width: "179px",
+      gap: "11px",
       justifyContent: "space-between",
-      marginLeft: "45px",
       cursor: "pointer",
       backgroundColor: "#fff",
     },
@@ -54,12 +53,14 @@ const Header = () => {
           variation={{ width: "145px", height: "28px" }}
         />
       </div>
-      <div style={classes.navigate}>
-        {navigate.map((item) => {
-          return <div style={{ cursor: "pointer" }}>{item}</div>;
-        })}
+      <div style={{ display: "flex", width: "60%" }}>
+        <div style={classes.navigate}>
+          {navigate.map((item) => {
+            return <div style={{ cursor: "pointer" }}>{item}</div>;
+          })}
+        </div>
+        <ThemeButton />
       </div>
-      <ThemeButton />
     </div>
   );
 };
