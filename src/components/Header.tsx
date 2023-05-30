@@ -18,7 +18,7 @@ const Header = () => {
   const classes = {
     navigate: {
       display: "flex",
-      width: "80%",
+      width: "83%",
       alignItems: "center",
       gap: "15px",
       fontFamily: "Diatype,Arial,sans-serif",
