@@ -1,11 +1,6 @@
-import React from "react";
 import Text from "./Text";
 import VerticalLine from "./VerticalLine";
 import styled from "styled-components";
-
-type StyleObject = {
-  [key: string]: React.CSSProperties;
-};
 
 const Censorship = styled.div`
   display: flex;
@@ -63,25 +58,6 @@ const Numbersection = styled.div`
 `;
 
 const TextSection = () => {
-  const classes: StyleObject = {
-    censorshipPoints: {
-      width: "40%",
-      height: "35%",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      display: "flex",
-      padding: "4%",
-    },
-    censorship: {
-      display: "flex",
-      justifyContent: "space-around",
-    },
-    numbersection: {
-      display: "flex",
-      width: "106%",
-      justifyContent: "space-between",
-    },
-  };
   return (
     <div style={{ display: "flex", justifyContent: "center", width: "88%" }}>
       <Censorship>
