@@ -64,7 +64,7 @@ const Body = () => {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      width: "100%",
+      width: "110%",
       flexWrap: "wrap",
     },
   };

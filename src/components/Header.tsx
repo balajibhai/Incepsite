@@ -29,7 +29,8 @@ const Header = () => {
       alignItems: "center",
       margin: "43px",
       width: "100%",
-      gap: "160px",
+      gap: "270px",
+      paddingLeft: "5%",
     },
     image: {
       display: "flex",
