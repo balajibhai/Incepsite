@@ -6,6 +6,7 @@ import { logo, logoTitle } from "../Constants";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import PopupDropdown from "./PopupDropdown";
 
 const Navigate = styled.div`
   display: flex;
@@ -115,6 +116,7 @@ const Header = () => {
         <Hamburger onClick={toggleDropdown}>
           <FontAwesomeIcon icon={faBars} />
         </Hamburger>
+        {<PopupDropdown showDropdown={showDropdown} navigate={navigate} />}
       </Content>
     </Parent>
   );
