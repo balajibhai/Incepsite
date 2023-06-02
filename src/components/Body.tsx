@@ -50,7 +50,7 @@ const Body = () => {
       fontWeight: "700",
       fontSize: "40px",
       fontFamily: "Diatype,Arial,sans-serif",
-      height: "230px",
+      maxHeight: "38vh",
       color: theme,
     },
     parent: {
