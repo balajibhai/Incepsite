@@ -53,18 +53,11 @@ const Body = () => {
       maxHeight: "38vh",
       color: theme,
     },
-    parent: {
-      width: "500px",
-      height: "452px",
-      flexDirection: "column",
-      justifyContent: "space-between",
-      display: "flex",
-    },
     grandParent: {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      width: "110%",
+      width: "100%",
       flexWrap: "wrap",
     },
   };
