@@ -14,12 +14,12 @@ const PopupDropdown = ({ showDropdown, navigate }: showHideProps) => {
     position: "absolute",
     top: "100%",
     width: "195px",
-    left: "-188px",
     backgroundColor: "#f5f5f5",
     padding: "8px",
     border: "1px solid #ddd",
     borderTop: "none",
     display: showDropdown ? "block" : "none",
+    transform: "translateX(-100%)",
   };
 
   return (

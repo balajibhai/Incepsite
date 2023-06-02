@@ -17,7 +17,7 @@ const Subtext = styled.div`
   color: ${(props) => props.theme};
 `;
 
-const TextParent = styled.div`
+const FoundationContainer = styled.div`
   @media (max-width: 1275px) {
     display: flex;
     width: 90%;
@@ -26,7 +26,7 @@ const TextParent = styled.div`
   }
 `;
 
-const Parent = styled.div`
+const SubFoundationContainer = styled.div`
   width: 500px;
   height: 452px;
   flex-direction: column;
@@ -50,7 +50,7 @@ const Body = () => {
       fontWeight: "700",
       fontSize: "40px",
       fontFamily: "Diatype,Arial,sans-serif",
-      height: "46%",
+      height: "230px",
       color: theme,
     },
     parent: {
@@ -71,8 +71,8 @@ const Body = () => {
   return (
     <>
       <div style={classes.grandParent}>
-        <TextParent theme={theme}>
-          <Parent theme={theme}>
+        <FoundationContainer theme={theme}>
+          <SubFoundationContainer theme={theme}>
             <div style={classes.text}>
               <h1>The Solana Foundation</h1>
             </div>
@@ -91,8 +91,8 @@ const Body = () => {
                 text="Learn more about solana"
               />
             </div>
-          </Parent>
-        </TextParent>
+          </SubFoundationContainer>
+        </FoundationContainer>
         <div>
           <Image
             src={ballImg}

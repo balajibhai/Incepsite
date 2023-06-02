@@ -2,7 +2,7 @@ import CardComponent from "./CardComponent";
 
 const CardsGrid = () => {
   return (
-    <div style={{ width: "115%", display: "flex", justifyContent: "center" }}>
+    <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
       <div
         style={{
           display: "flex",

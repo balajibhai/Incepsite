@@ -7,7 +7,6 @@ const FooterTextSection = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-left: 121px;
   flex-wrap: wrap;
 
   @media (max-width: 715px) {
