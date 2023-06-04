@@ -2,12 +2,13 @@ import CardComponent from "./CardComponent";
 
 const CardsGrid = () => {
   return (
-    <div style={{ marginLeft: "145px" }}>
+    <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
       <div
         style={{
-          width: "1060px",
-          justifyContent: "space-between",
           display: "flex",
+          flexWrap: "wrap",
+          width: "71%",
+          gap: "60px",
         }}
       >
         <CardComponent
@@ -30,15 +31,6 @@ const CardsGrid = () => {
             backgroundColor: "#bf2b06",
           }}
         />
-      </div>
-      <div
-        style={{
-          width: "1060px",
-          justifyContent: "space-between",
-          display: "flex",
-          marginTop: "50px",
-        }}
-      >
         <CardComponent
           variant={{
             title: "Server Program",

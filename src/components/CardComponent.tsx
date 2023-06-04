@@ -12,17 +12,36 @@ type CardProps = {
     color: string;
     text: string;
     backgroundColor: string;
+    marginLeft?: string;
   };
 };
 
 const card = ({ variant }: CardProps) => (
   <React.Fragment>
     <CardContent>
-      <Typography sx={{ fontSize: 24 }} color={variant.color} gutterBottom>
+      <Typography
+        sx={{
+          fontSize: {
+            xs: 18, // styles for extra small screens and above
+            sm: 24, // styles for small screens and above
+          },
+        }}
+        color={variant.color}
+        gutterBottom
+      >
         <h1>{variant.title}</h1>
       </Typography>
 
-      <Typography sx={{ mb: 1.5, height: "100px" }} color={variant.color}>
+      <Typography
+        sx={{
+          mb: 1.5,
+          minHeight: {
+            xs: "80px", // styles for extra small screens and above
+            sm: "100px", // styles for small screens and above
+          },
+        }}
+        color={variant.color}
+      >
         {variant.subtitle}
       </Typography>
     </CardContent>
@@ -41,13 +60,18 @@ const card = ({ variant }: CardProps) => (
 
 export default function CardComponent({ variant }: CardProps) {
   return (
-    <Box sx={{ minWidth: 27 }}>
+    <Box sx={{ minWidth: 250 }}>
       <Card
         sx={{
-          width: "500px",
-          height: "350px",
+          maxWidth: "500px",
+          minHeight: "350px",
           backgroundColor: variant.backgroundColor,
           borderRadius: "30px",
+          "@media (max-width: 1000px)": {
+            // media query for screens up to 600px width
+            minWidth: "200px",
+            minHeight: "200px",
+          },
         }}
         variant="outlined"
       >
